@@ -6,7 +6,7 @@
     </div>
     <template v-for="(item, index) in items">
       <ListItem class="p-4"
-          :key="`list-item-${index}`"
+                :key="`list-item-${index}`"
                 :item="item"/>
     </template>
   </div>
@@ -35,9 +35,11 @@ export default {
 .list-title-bg {
   background-color: #f5f5f5
 }
+
 .list-title-text {
   font-weight: bold;
 }
+
 .list-title-icon-color {
   color: #03a04b
 }
