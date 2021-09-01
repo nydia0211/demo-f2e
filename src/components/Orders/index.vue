@@ -25,8 +25,8 @@ export default {
   components: {List},
   computed: {
     ...mapState({
-      items: state => state.orders,
-      loading: state => state.loading
+      items: state => state.orders.items,
+      loading: state => state.orders.loading
     }),
     inProcessList() {
       return this.items.filter(item => utils.inProcess(item))
@@ -36,11 +36,11 @@ export default {
     }
   },
   created() {
-    this.$store.commit("updateOrders")
+    this.$store.dispatch("orders/updateOrders")
   },
   methods: {
     async refresh() {
-      this.$store.commit("updateOrders")
+      this.$store.dispatch("orders/updateOrders")
     }
   }
 }
