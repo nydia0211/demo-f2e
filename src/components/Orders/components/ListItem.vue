@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex flex-row">
-    <img class="item-logo-size p-2" :src="item.logo"/>
+    <img class="item-logo p-2" :class="{ 'item-status-finished' : finished }"
+         :src="item.logo"/>
     <div class="d-inline-flex flex-column px-2 item-text">
       <div class="d-flex flex-wrap item-status-text">
         <span :class="{ 'item-status-in-process' : inProcess, 'item-status-finished' : finished }">{{
@@ -53,9 +54,13 @@ export default {
 </script>
 
 <style scoped>
-.item-logo-size {
+.item-logo {
   width: 5rem;
   height: 5rem;
+}
+
+.item-logo.item-status-finished {
+  -webkit-filter:grayscale(1);
 }
 
 .item-text {
