@@ -13,14 +13,16 @@
       </div>
     </div>
     <div class="ml-auto align-self-center">
-      <i class="fas fa-angle-right"></i>
+      <button type="button" class="btn btn-link">
+        <i class="fas fa-angle-right"></i>
+      </button>
     </div>
 
   </div>
 </template>
 
 <script>
-import utils from '@/views/Orders/utils'
+import utils from '@/components/Orders/utils'
 
 export default {
   name: "ListItem",
@@ -71,6 +73,10 @@ export default {
 }
 
 .item-status-finished {
+  color: #3b3e3b;
+}
+
+.btn-link {
   color: #3b3e3b;
 }
 </style>

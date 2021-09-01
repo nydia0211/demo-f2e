@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <List :items="inProcessList"
     :title="'進行中'"></List>
     <List :items="finishedList"
@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import List from "@/views/Orders/components/List";
-import utils from "@/views/Orders/utils";
+import List from "@/components/Orders/components/List";
+import utils from "@/components/Orders/utils";
 
 export default {
   name: "Orders",

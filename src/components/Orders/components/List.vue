@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import ListItem from "@/views/Orders/components/ListItem";
+import ListItem from "@/components/Orders/components/ListItem";
 
 export default {
   name: "List",
